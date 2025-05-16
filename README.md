@@ -1,74 +1,64 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🧠 FaceEntry – Smart Face Recognition Entry System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **FaceEntry** — A robust face recognition entry system leveraging **AWS Lambda**, **Amazon Rekognition**, **S3**, **DynamoDB**, **API Gateway**, and a **React** frontend.  
+This solution securely **authenticates** employees and visitors by comparing uploaded images with **registere**d data using **Rekognition’s** advanced **facial analysis.** Authenticated users are granted _access_, while unauthorized attempts are _rejected_ in real-time.
 
-## Available Scripts
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Tech Stack
+- **Frontend:** React ⚛️
+- **Backend:** AWS Lambda (Python 🐍)
+- **Services:** Amazon Rekognition, S3, API Gateway, DynamoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Architecture Overview
 
-### `npm test`
+![Architecture Diagram](./path/to/your/image.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔁 Flow:
+1. 📸 **Employee/Visitor** uploads image from React frontend.
+2. 🪪 **Employee images** stored in `S3: Employee--Pics`.
+3. 🔐 **Registration Lambda** processes employee data, stores metadata in DynamoDB.
+4. 🎯 **Visitor images** stored in `S3: Visitor--Pics`.
+5. 🧠 **Amazon Rekognition** compares visitor image with stored employee images.
+6. ✅/❌ **Auth Lambda** returns authentication result via API Gateway.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
+- 🔐 Face-based authentication
+- ☁️ Serverless architecture (AWS Lambda)
+- 🧾 Real-time logs via CloudWatch
+- 📁 Uses two separate S3 buckets for Employees and Visitors
+- 🌗 Optional: Dark mode supported (via frontend switch)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Setup Instructions
+1. Clone repo and install dependencies
+   ```bash
+   git clone https://github.com/yourusername/Face-Rekognition-App.git
+   cd Face-Rekognition-App
+   npm install
+2. Configure your AWS credentials.
+3. Deploy Lambdas and API Gateway via AWS Console or CLI.
+4. Run React frontend:
+   
+     ```bash
+          npm start
+     ```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📚 AWS Services Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **S3**: Store employee and visitor images  
+- **Lambda**: Handles Registration & Authentication logic  
+- **DynamoDB**: Stores employee metadata  
+- **Amazon Rekognition**: Performs face matching and verification  
+- **API Gateway**: Exposes Lambda functions to the React frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🙋‍♂️ Author
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Face-Rekognition-App
->>>>>>> 5f247215516ccfa5d7e2dd66e98824d754805ddf
+**Vaishali Joshi**  
