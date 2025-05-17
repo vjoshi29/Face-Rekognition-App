@@ -15,7 +15,7 @@ This solution securely **authenticates** employees and visitors by comparing upl
 
 ## 🧩 Architecture Overview
 
-![Architecture Diagram](./path/to/your/image.png)
+![Screenshot (156)](https://github.com/user-attachments/assets/b4f1bad7-9378-487a-bb15-35ef9b48b16f) 
 
 ### 🔁 Flow:
 1. 📸 **Employee/Visitor** uploads image from React frontend.
@@ -26,6 +26,17 @@ This solution securely **authenticates** employees and visitors by comparing upl
 6. ✅/❌ **Auth Lambda** returns authentication result via API Gateway.
 
 ---
+
+## 📚 AWS Services Used
+
+- **S3**: Store employee and visitor images  
+- **Lambda**: Handles Registration & Authentication logic  
+- **DynamoDB**: Stores employee metadata  
+- **Amazon Rekognition**: Performs face matching and verification  
+- **API Gateway**: Exposes Lambda functions to the React frontend
+
+---
+
 
 ## 🚀 Features
 - 🔐 Face-based authentication
@@ -51,13 +62,19 @@ This solution securely **authenticates** employees and visitors by comparing upl
      ```
 
 
-## 📚 AWS Services Used
 
-- **S3**: Store employee and visitor images  
-- **Lambda**: Handles Registration & Authentication logic  
-- **DynamoDB**: Stores employee metadata  
-- **Amazon Rekognition**: Performs face matching and verification  
-- **API Gateway**: Exposes Lambda functions to the React frontend
+## 📸 Screenshots
+
+Demonstrating face authentication results and theme modes.
+
+| Light Mode – Access Granted | Light Mode – Access Denied |
+|-----------------------------|-----------------------------|
+| ![LightModeT](https://github.com/user-attachments/assets/1f52fa7d-627f-4a3d-b338-5c9cb64e6cdb)    |![LightModeF](https://github.com/user-attachments/assets/fc8a7b7c-8612-4d54-bdb0-2e4def21c66a)|
+
+
+| Dark Mode – Access Granted | Dark Mode – Access Denied |
+|----------------------------|----------------------------|
+| ![DarkModeT](https://github.com/user-attachments/assets/018a1986-6b11-4b7e-a0ca-ba05dc03b9d9)     | ![DarkModeF](https://github.com/user-attachments/assets/2ef77429-825b-4121-aa73-f9644054b71c)|
 
 ## 🙋‍♂️ Author
 
